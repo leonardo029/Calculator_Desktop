@@ -48,7 +48,14 @@ namespace Calculator_Desktop
 
             enterFirstValue = Convert.ToDouble(txtResult.Text);
             op = num.Text;
-            txtHistoric.Text = (enterFirstValue+" "+op).ToString();
+            if (op == "exp")
+            {
+                txtHistoric.Text = (enterFirstValue + " " + "^").ToString();
+            }
+            else
+            {
+                txtHistoric.Text = (enterFirstValue + " " + op).ToString();
+            }
             txtResult.Text = "";
         }
 
